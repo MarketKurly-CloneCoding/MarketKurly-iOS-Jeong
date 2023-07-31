@@ -15,6 +15,10 @@
 		0330CA9B2A77CD3B004CE2D7 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0330CA9A2A77CD3B004CE2D7 /* Data.swift */; };
 		0330CAA12A77CE42004CE2D7 /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0330CAA02A77CE42004CE2D7 /* UIView+.swift */; };
 		0330CAA32A77CE4E004CE2D7 /* UITabBar+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0330CAA22A77CE4E004CE2D7 /* UITabBar+.swift */; };
+		0330CAA92A77CEAC004CE2D7 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0330CAA82A77CEAC004CE2D7 /* Image.swift */; };
+		0330CAAB2A77CEBF004CE2D7 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0330CAAA2A77CEBF004CE2D7 /* Color.swift */; };
+		0330CAAD2A77CED9004CE2D7 /* Image.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0330CAAC2A77CED9004CE2D7 /* Image.xcassets */; };
+		0330CAAF2A77CF40004CE2D7 /* Color.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0330CAAE2A77CF40004CE2D7 /* Color.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +32,10 @@
 		0330CA9A2A77CD3B004CE2D7 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		0330CAA02A77CE42004CE2D7 /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
 		0330CAA22A77CE4E004CE2D7 /* UITabBar+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITabBar+.swift"; sourceTree = "<group>"; };
+		0330CAA82A77CEAC004CE2D7 /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
+		0330CAAA2A77CEBF004CE2D7 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		0330CAAC2A77CED9004CE2D7 /* Image.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Image.xcassets; sourceTree = "<group>"; };
+		0330CAAE2A77CF40004CE2D7 /* Color.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Color.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +116,8 @@
 			isa = PBXGroup;
 			children = (
 				0330CA8D2A77CA54004CE2D7 /* Assets.xcassets */,
+				0330CAAC2A77CED9004CE2D7 /* Image.xcassets */,
+				0330CAAE2A77CF40004CE2D7 /* Color.xcassets */,
 			);
 			path = AssetCatalog;
 			sourceTree = "<group>";
@@ -115,10 +125,28 @@
 		0330CA9F2A77CE32004CE2D7 /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				0330CAA42A77CE71004CE2D7 /* Extension */,
+				0330CAA72A77CE9A004CE2D7 /* NameSpace */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		0330CAA42A77CE71004CE2D7 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
 				0330CAA02A77CE42004CE2D7 /* UIView+.swift */,
 				0330CAA22A77CE4E004CE2D7 /* UITabBar+.swift */,
 			);
-			path = Util;
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		0330CAA72A77CE9A004CE2D7 /* NameSpace */ = {
+			isa = PBXGroup;
+			children = (
+				0330CAA82A77CEAC004CE2D7 /* Image.swift */,
+				0330CAAA2A77CEBF004CE2D7 /* Color.swift */,
+			);
+			path = NameSpace;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -180,6 +208,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				0330CA912A77CA54004CE2D7 /* LaunchScreen.storyboard in Resources */,
+				0330CAAF2A77CF40004CE2D7 /* Color.xcassets in Resources */,
+				0330CAAD2A77CED9004CE2D7 /* Image.xcassets in Resources */,
 				0330CA8E2A77CA54004CE2D7 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -191,10 +221,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0330CAA92A77CEAC004CE2D7 /* Image.swift in Sources */,
 				0330CA892A77CA53004CE2D7 /* ViewController.swift in Sources */,
 				0330CAA32A77CE4E004CE2D7 /* UITabBar+.swift in Sources */,
 				0330CA852A77CA53004CE2D7 /* AppDelegate.swift in Sources */,
 				0330CA872A77CA53004CE2D7 /* SceneDelegate.swift in Sources */,
+				0330CAAB2A77CEBF004CE2D7 /* Color.swift in Sources */,
 				0330CA9B2A77CD3B004CE2D7 /* Data.swift in Sources */,
 				0330CAA12A77CE42004CE2D7 /* UIView+.swift in Sources */,
 			);
