@@ -23,6 +23,11 @@
 		0330CAB92A77D0D9004CE2D7 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = 0330CAB82A77D0D9004CE2D7 /* Then */; };
 		0330CABC2A77D0E3004CE2D7 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 0330CABB2A77D0E3004CE2D7 /* SnapKit */; };
 		0330CABF2A77D0FD004CE2D7 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 0330CABE2A77D0FD004CE2D7 /* Moya */; };
+		0330CAC12A77D13E004CE2D7 /* TabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0330CAC02A77D13E004CE2D7 /* TabBarItem.swift */; };
+		0330CAC32A77D16B004CE2D7 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0330CAC22A77D16B004CE2D7 /* HomeViewController.swift */; };
+		0330CAC52A77D176004CE2D7 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0330CAC42A77D176004CE2D7 /* CategoryViewController.swift */; };
+		0330CAC72A77D191004CE2D7 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0330CAC62A77D191004CE2D7 /* SearchViewController.swift */; };
+		0330CAC92A77D1A3004CE2D7 /* MypageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0330CAC82A77D1A3004CE2D7 /* MypageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +46,11 @@
 		0330CAAC2A77CED9004CE2D7 /* Image.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Image.xcassets; sourceTree = "<group>"; };
 		0330CAAE2A77CF40004CE2D7 /* Color.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Color.xcassets; sourceTree = "<group>"; };
 		0330CAB52A77D0C2004CE2D7 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		0330CAC02A77D13E004CE2D7 /* TabBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarItem.swift; sourceTree = "<group>"; };
+		0330CAC22A77D16B004CE2D7 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		0330CAC42A77D176004CE2D7 /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
+		0330CAC62A77D191004CE2D7 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		0330CAC82A77D1A3004CE2D7 /* MypageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MypageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +175,7 @@
 		0330CAB02A77D06B004CE2D7 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				0330CAC22A77D16B004CE2D7 /* HomeViewController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -172,6 +183,7 @@
 		0330CAB12A77D06F004CE2D7 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				0330CAC42A77D176004CE2D7 /* CategoryViewController.swift */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -179,6 +191,7 @@
 		0330CAB22A77D07B004CE2D7 /* Search */ = {
 			isa = PBXGroup;
 			children = (
+				0330CAC62A77D191004CE2D7 /* SearchViewController.swift */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -186,6 +199,7 @@
 		0330CAB32A77D083004CE2D7 /* Mypage */ = {
 			isa = PBXGroup;
 			children = (
+				0330CAC82A77D1A3004CE2D7 /* MypageViewController.swift */,
 			);
 			path = Mypage;
 			sourceTree = "<group>";
@@ -194,6 +208,7 @@
 			isa = PBXGroup;
 			children = (
 				0330CAB52A77D0C2004CE2D7 /* TabBarController.swift */,
+				0330CAC02A77D13E004CE2D7 /* TabBarItem.swift */,
 			);
 			path = TabBar;
 			sourceTree = "<group>";
@@ -282,10 +297,15 @@
 			files = (
 				0330CAA92A77CEAC004CE2D7 /* Image.swift in Sources */,
 				0330CA892A77CA53004CE2D7 /* ViewController.swift in Sources */,
+				0330CAC12A77D13E004CE2D7 /* TabBarItem.swift in Sources */,
 				0330CAA32A77CE4E004CE2D7 /* UITabBar+.swift in Sources */,
+				0330CAC52A77D176004CE2D7 /* CategoryViewController.swift in Sources */,
 				0330CAB62A77D0C2004CE2D7 /* TabBarController.swift in Sources */,
 				0330CA852A77CA53004CE2D7 /* AppDelegate.swift in Sources */,
 				0330CA872A77CA53004CE2D7 /* SceneDelegate.swift in Sources */,
+				0330CAC72A77D191004CE2D7 /* SearchViewController.swift in Sources */,
+				0330CAC92A77D1A3004CE2D7 /* MypageViewController.swift in Sources */,
+				0330CAC32A77D16B004CE2D7 /* HomeViewController.swift in Sources */,
 				0330CAAB2A77CEBF004CE2D7 /* Color.swift in Sources */,
 				0330CA9B2A77CD3B004CE2D7 /* Data.swift in Sources */,
 				0330CAA12A77CE42004CE2D7 /* UIView+.swift in Sources */,
