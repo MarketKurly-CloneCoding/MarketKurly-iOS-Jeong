@@ -95,7 +95,7 @@ extension CustomNavigationBar {
         searchTitleLabel.do {
             $0.text = "검색"
             $0.textColor = Color.white
-            $0.font = .systemFont(ofSize: 16, weight: .regular)
+            $0.font = .systemFont(ofSize: 16, weight: .bold)
             $0.isHidden = true
         }
         
@@ -103,6 +103,7 @@ extension CustomNavigationBar {
             $0.text = "[욱이네] 차돌된장찌개"
             $0.textColor = Color.black
             $0.font = .systemFont(ofSize: 16, weight: .regular)
+            $0.isHidden = true
         }
         
         naviButton.do {

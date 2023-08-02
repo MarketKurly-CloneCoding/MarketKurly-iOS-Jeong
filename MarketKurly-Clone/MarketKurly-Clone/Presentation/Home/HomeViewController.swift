@@ -7,23 +7,53 @@
 
 import UIKit
 
-class HomeViewController: UIViewController {
+import Moya
+import SnapKit
+import Then
 
+final class HomeViewController: UIViewController {
+    
+    // MARK: - UI Components
+    
+    private let navigationView = CustomNavigationBar()
+    
+    // MARK: - Properties
+    
+    // MARK: - Initializer
+    
+    // MARK: - View Life Cycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        setUI()
+        setLayout()
+    }
+}
 
-        // Do any additional setup after loading the view.
+extension HomeViewController {
+    
+    // MARK: - UI Components Property
+    
+    private func setUI() {
+        
+        view.backgroundColor = Color.white
+        
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    // MARK: - Layout Helper
+    
+    private func setLayout() {
+        
+        view.addSubviews(navigationView)
+        
+        navigationView.snp.makeConstraints {
+            $0.top.equalToSuperview()
+            $0.leading.trailing.equalToSuperview()
+            $0.height.equalTo(94)
+        }
     }
-    */
-
+    
+    // MARK: - Methods
+    
+    // MARK: - @objc Methods
 }

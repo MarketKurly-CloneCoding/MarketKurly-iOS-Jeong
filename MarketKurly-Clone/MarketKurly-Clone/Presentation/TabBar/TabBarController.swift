@@ -50,7 +50,7 @@ extension TabBarController {
     
     private func setTabBarUI() {
         UITabBar.clearShadow()
-        tabBar.tintColor = Color.mainColor
+        tabBar.tintColor = Color.mainPurple
         tabBar.layer.masksToBounds = false
         let lineView = UIView(frame: CGRect(x: 0, y: 0, width: tabBar.frame.size.width, height: 1))
         lineView.backgroundColor = .systemGray5
