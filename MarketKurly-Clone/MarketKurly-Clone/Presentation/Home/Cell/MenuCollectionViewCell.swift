@@ -15,7 +15,7 @@ final class MenuCollectionViewCell: UICollectionViewCell {
     // MARK: - UI Components
     
     private let titleLabel = UILabel()
-    private let underLine = UIView()
+    let underLine = UIView()
     
     // MARK: - Properties
     

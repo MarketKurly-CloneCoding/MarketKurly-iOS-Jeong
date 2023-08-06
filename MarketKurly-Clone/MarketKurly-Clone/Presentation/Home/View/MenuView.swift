@@ -20,10 +20,20 @@ final class MenuView: UIView {
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         return collectionView
     }()
+    private lazy var pageViewController: UIPageViewController = {
+        let vc = UIPageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal)
+        return vc
+    }()
     
     // MARK: - Properties
     
     private var menuTitleModel: [HomeMenuModel] = HomeMenuModel.homeMenuData()
+    private var menuVCs: [UIViewController] = []
+    var nowIndex: Int = 0 {
+        didSet {
+            pageBind(oldValue: oldValue, newValue: nowIndex)
+        }
+    }
     
     // MARK: - Initializer
     
@@ -31,10 +41,13 @@ final class MenuView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        nowIndex = 0
         setUI()
         setLayout()
         setDelegate()
         setRegister()
+        setViewControllersInPageVC()
+        setPageViewController()
     }
     
     required init?(coder: NSCoder) {
@@ -61,13 +74,19 @@ extension MenuView {
     // MARK: - Layout Helper
     
     private func setLayout() {
-        
-        addSubviews(menuCollectionView)
+    
+        addSubviews(menuCollectionView, pageViewController.view)
         
         menuCollectionView.snp.makeConstraints {
             $0.top.equalToSuperview()
             $0.leading.trailing.equalToSuperview()
             $0.height.equalTo(44)
+        }
+        
+        pageViewController.view.snp.makeConstraints {
+            $0.top.equalTo(menuCollectionView.snp.bottom)
+            $0.leading.trailing.equalToSuperview()
+            $0.height.equalTo(500)
         }
     }
     
@@ -76,6 +95,8 @@ extension MenuView {
     private func setDelegate() {
         menuCollectionView.dataSource = self
         menuCollectionView.delegate = self
+        pageViewController.dataSource = self
+        pageViewController.delegate = self
     }
     
     private func setRegister() {
@@ -91,6 +112,30 @@ extension MenuView {
     private func cellUnderLineSetting(cell: MenuCollectionViewCell?, indexPath: IndexPath, selected: Bool) {
         cell?.isSelected = selected
         cell?.setUnderLineWidth(size: labelWidthSize(index: indexPath.row))
+    }
+    
+    private func setViewControllersInPageVC() {
+        if let firstVC = menuVCs.first {
+            pageViewController.setViewControllers([firstVC], direction: .forward, animated: true, completion: nil)
+        }
+    }
+    
+    private func setPageViewController() {
+        menuVCs += [KurlyRecommendationViewController()]
+        menuVCs += [NewProductViewController()]
+        menuVCs += [BestViewController()]
+        menuVCs += [ThriftyShoppingViewController()]
+        menuVCs += [SpecialsViewController()]
+    }
+    
+    private func pageBind(oldValue: Int, newValue: Int) {
+        let direction: UIPageViewController.NavigationDirection = oldValue < newValue ? .forward : .reverse
+        pageViewController.setViewControllers([menuVCs[nowIndex]], direction: direction, animated: true)
+        menuCollectionView.selectItem(at: IndexPath(item: nowIndex, section: 0), animated: true, scrollPosition: .centeredHorizontally)
+    }
+    
+    private func didTapCell(at indexPath: IndexPath) {
+        nowIndex = indexPath.item
     }
     
     // MARK: - @objc Methods
@@ -127,6 +172,11 @@ extension MenuView: UICollectionViewDelegateFlowLayout {
     }
     
     func  collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let currentVC = menuVCs[indexPath.row]
+        let currentIndex = menuVCs.firstIndex(of: currentVC)!
+        pageBind(oldValue: currentIndex, newValue: nowIndex)
+        didTapCell(at: indexPath)
+        
         let cell = collectionView.cellForItem(at: indexPath) as? MenuCollectionViewCell
         cellUnderLineSetting(cell: cell, indexPath: indexPath, selected: true)
     }
@@ -134,5 +184,41 @@ extension MenuView: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
         let cell = collectionView.cellForItem(at: indexPath) as? MenuCollectionViewCell
         cellUnderLineSetting(cell: cell, indexPath: indexPath, selected: false)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        if let myCell = cell as? MenuCollectionViewCell {
+            myCell.underLine.isHidden = !myCell.isSelected
+            myCell.setUnderLineWidth(size: labelWidthSize(index: indexPath.row))
+        }
+    }
+}
+
+extension MenuView: UIPageViewControllerDelegate {
+    func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
+        guard let currentVC = pageViewController.viewControllers?.first,
+              let currentIndex = menuVCs.firstIndex(of: currentVC) else { return }
+        nowIndex = currentIndex
+        print(currentIndex)
+    }
+}
+
+extension MenuView: UIPageViewControllerDataSource {
+    func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
+        guard let index = menuVCs.firstIndex(of: viewController) else { return nil }
+        let previousIndex = index - 1
+        if previousIndex < 0 {
+            return nil
+        }
+        return menuVCs[previousIndex]
+    }
+    
+    func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
+        guard let index = menuVCs.firstIndex(of: viewController) else { return nil }
+        let nextIndex = index + 1
+        if nextIndex == menuVCs.count {
+            return nil
+        }
+        return menuVCs[nextIndex]
     }
 }
