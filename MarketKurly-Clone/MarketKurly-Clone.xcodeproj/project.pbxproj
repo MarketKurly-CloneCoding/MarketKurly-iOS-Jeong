@@ -33,6 +33,7 @@
 		0386F4F22A7FA0170030B335 /* HomeMenuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0386F4F12A7FA0170030B335 /* HomeMenuModel.swift */; };
 		0386F4F42A7FA27E0030B335 /* UICollectionView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0386F4F32A7FA27E0030B335 /* UICollectionView+.swift */; };
 		0386F4F62A7FA2950030B335 /* NSObject+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0386F4F52A7FA2950030B335 /* NSObject+.swift */; };
+		0386F4F92A7FB5030030B335 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0386F4F82A7FB5030030B335 /* MenuView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,6 +62,7 @@
 		0386F4F12A7FA0170030B335 /* HomeMenuModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMenuModel.swift; sourceTree = "<group>"; };
 		0386F4F32A7FA27E0030B335 /* UICollectionView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+.swift"; sourceTree = "<group>"; };
 		0386F4F52A7FA2950030B335 /* NSObject+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+.swift"; sourceTree = "<group>"; };
+		0386F4F82A7FB5030030B335 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,6 +190,7 @@
 		0330CAB02A77D06B004CE2D7 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				0386F4F72A7FB4F00030B335 /* View */,
 				0386F4EC2A7F9BFB0030B335 /* ViewController */,
 				0386F4ED2A7F9C030030B335 /* Cell */,
 				0386F4F02A7FA0030030B335 /* Model */,
@@ -266,6 +269,14 @@
 				0386F4F12A7FA0170030B335 /* HomeMenuModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		0386F4F72A7FB4F00030B335 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0386F4F82A7FB5030030B335 /* MenuView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -355,6 +366,7 @@
 				0330CAA32A77CE4E004CE2D7 /* UITabBar+.swift in Sources */,
 				0386F4EF2A7F9E1E0030B335 /* MenuCollectionViewCell.swift in Sources */,
 				0386F4F42A7FA27E0030B335 /* UICollectionView+.swift in Sources */,
+				0386F4F92A7FB5030030B335 /* MenuView.swift in Sources */,
 				0386F4F22A7FA0170030B335 /* HomeMenuModel.swift in Sources */,
 				0330CAC52A77D176004CE2D7 /* CategoryViewController.swift in Sources */,
 				0330CAB62A77D0C2004CE2D7 /* TabBarController.swift in Sources */,
