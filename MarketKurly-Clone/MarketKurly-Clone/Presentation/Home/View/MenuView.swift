@@ -46,8 +46,9 @@ final class MenuView: UIView {
         setLayout()
         setDelegate()
         setRegister()
-        setViewControllersInPageVC()
+        setCollectionViewCell()
         setPageViewController()
+        setViewControllersInPageVC()
     }
     
     required init?(coder: NSCoder) {
@@ -68,7 +69,6 @@ extension MenuView {
             $0.showsHorizontalScrollIndicator = false
             $0.backgroundColor = .clear
         }
-        
     }
     
     // MARK: - Layout Helper
@@ -136,6 +136,10 @@ extension MenuView {
     
     private func didTapCell(at indexPath: IndexPath) {
         nowIndex = indexPath.item
+    }
+    
+    private func setCollectionViewCell() {
+        menuCollectionView.selectItem(at: IndexPath(item: 0, section: 0), animated: false, scrollPosition: .centeredVertically)
     }
     
     // MARK: - @objc Methods
