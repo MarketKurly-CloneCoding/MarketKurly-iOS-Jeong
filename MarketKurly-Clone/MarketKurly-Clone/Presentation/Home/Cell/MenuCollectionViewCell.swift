@@ -85,5 +85,8 @@ extension CollectionViewCell {
     }
     
     // MARK: - Methods
-
+    
+    func setDataBind(model : HomeMenuModel) {
+        titleLabel.text = model.title
+    }
 }
