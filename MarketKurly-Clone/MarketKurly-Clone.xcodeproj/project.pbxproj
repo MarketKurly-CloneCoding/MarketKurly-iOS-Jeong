@@ -29,6 +29,8 @@
 		0330CAC92A77D1A3004CE2D7 /* MypageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0330CAC82A77D1A3004CE2D7 /* MypageViewController.swift */; };
 		0330CACC2A79441A004CE2D7 /* CustomNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0330CACB2A79441A004CE2D7 /* CustomNavigationBar.swift */; };
 		0330CACF2A7A6D62004CE2D7 /* SizeLiterals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0330CACE2A7A6D61004CE2D7 /* SizeLiterals.swift */; };
+		0386F4EF2A7F9E1E0030B335 /* MenuCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0386F4EE2A7F9E1E0030B335 /* MenuCollectionViewCell.swift */; };
+		0386F4F22A7FA0170030B335 /* HomeMenuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0386F4F12A7FA0170030B335 /* HomeMenuModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +55,8 @@
 		0330CAC82A77D1A3004CE2D7 /* MypageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MypageViewController.swift; sourceTree = "<group>"; };
 		0330CACB2A79441A004CE2D7 /* CustomNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationBar.swift; sourceTree = "<group>"; };
 		0330CACE2A7A6D61004CE2D7 /* SizeLiterals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizeLiterals.swift; sourceTree = "<group>"; };
+		0386F4EE2A7F9E1E0030B335 /* MenuCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCollectionViewCell.swift; sourceTree = "<group>"; };
+		0386F4F12A7FA0170030B335 /* HomeMenuModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMenuModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,7 +182,9 @@
 		0330CAB02A77D06B004CE2D7 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				0330CAC22A77D16B004CE2D7 /* HomeViewController.swift */,
+				0386F4EC2A7F9BFB0030B335 /* ViewController */,
+				0386F4ED2A7F9C030030B335 /* Cell */,
+				0386F4F02A7FA0030030B335 /* Model */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -230,6 +236,30 @@
 				0330CACB2A79441A004CE2D7 /* CustomNavigationBar.swift */,
 			);
 			path = Navigation;
+			sourceTree = "<group>";
+		};
+		0386F4EC2A7F9BFB0030B335 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				0330CAC22A77D16B004CE2D7 /* HomeViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		0386F4ED2A7F9C030030B335 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				0386F4EE2A7F9E1E0030B335 /* MenuCollectionViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		0386F4F02A7FA0030030B335 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0386F4F12A7FA0170030B335 /* HomeMenuModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -317,6 +347,8 @@
 				0330CAA92A77CEAC004CE2D7 /* Image.swift in Sources */,
 				0330CAC12A77D13E004CE2D7 /* TabBarItem.swift in Sources */,
 				0330CAA32A77CE4E004CE2D7 /* UITabBar+.swift in Sources */,
+				0386F4EF2A7F9E1E0030B335 /* MenuCollectionViewCell.swift in Sources */,
+				0386F4F22A7FA0170030B335 /* HomeMenuModel.swift in Sources */,
 				0330CAC52A77D176004CE2D7 /* CategoryViewController.swift in Sources */,
 				0330CAB62A77D0C2004CE2D7 /* TabBarController.swift in Sources */,
 				0330CACF2A7A6D62004CE2D7 /* SizeLiterals.swift in Sources */,
