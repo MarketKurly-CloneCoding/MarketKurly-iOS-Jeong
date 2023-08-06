@@ -10,7 +10,7 @@ import UIKit
 import SnapKit
 import Then
 
-final class CollectionViewCell: UICollectionViewCell {
+final class MenuCollectionViewCell: UICollectionViewCell {
     
     // MARK: - UI Components
     
@@ -47,7 +47,7 @@ final class CollectionViewCell: UICollectionViewCell {
     }
 }
 
-extension CollectionViewCell {
+extension MenuCollectionViewCell {
     
     // MARK: - UI Components Property
     
@@ -88,5 +88,11 @@ extension CollectionViewCell {
     
     func setDataBind(model : HomeMenuModel) {
         titleLabel.text = model.title
+    }
+    
+    func setUnderLineWidth(size: Int) {
+        underLine.snp.makeConstraints {
+            $0.width.equalTo(size + 20)
+        }
     }
 }
