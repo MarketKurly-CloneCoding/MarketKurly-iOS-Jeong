@@ -59,7 +59,7 @@ extension HomeViewController {
         menuCollectionView.snp.makeConstraints {
             $0.top.equalTo(navigationView.snp.bottom)
             $0.leading.trailing.equalTo(view.safeAreaLayoutGuide)
-            $0.height.equalTo(600)
+            $0.bottom.equalTo(view.safeAreaLayoutGuide)
         }
     }
     
