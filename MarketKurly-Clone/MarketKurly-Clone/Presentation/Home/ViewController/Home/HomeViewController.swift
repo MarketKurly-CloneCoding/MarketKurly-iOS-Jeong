@@ -16,7 +16,7 @@ final class HomeViewController: UIViewController {
     // MARK: - UI Components
     
     private let navigationView = CustomNavigationBar()
-    private let menuCollectionView = MenuView()
+    private let menuCollectionView = PageView()
     
     // MARK: - Properties
     

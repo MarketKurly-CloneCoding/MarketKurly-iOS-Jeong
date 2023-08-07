@@ -10,7 +10,7 @@ import UIKit
 import SnapKit
 import Then
 
-final class MenuView: UIView {
+final class PageView: UIView {
     
     // MARK: - UI Components
     
@@ -56,7 +56,7 @@ final class MenuView: UIView {
     }
 }
 
-extension MenuView {
+extension PageView {
     
     // MARK: - UI Components Property
     
@@ -145,7 +145,7 @@ extension MenuView {
     // MARK: - @objc Methods
 }
 
-extension MenuView: UICollectionViewDataSource {
+extension PageView: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return menuTitleModel.count
@@ -163,7 +163,7 @@ extension MenuView: UICollectionViewDataSource {
     }
 }
 
-extension MenuView: UICollectionViewDelegateFlowLayout {
+extension PageView: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let width = SizeLiterals.Screen.screenWidth * CGFloat(labelWidthSize(index: indexPath.row) + 20) / 375
@@ -198,7 +198,7 @@ extension MenuView: UICollectionViewDelegateFlowLayout {
     }
 }
 
-extension MenuView: UIPageViewControllerDelegate {
+extension PageView: UIPageViewControllerDelegate {
     func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
         guard let currentVC = pageViewController.viewControllers?.first,
               let currentIndex = menuVCs.firstIndex(of: currentVC) else { return }
@@ -207,7 +207,7 @@ extension MenuView: UIPageViewControllerDelegate {
     }
 }
 
-extension MenuView: UIPageViewControllerDataSource {
+extension PageView: UIPageViewControllerDataSource {
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
         guard let index = menuVCs.firstIndex(of: viewController) else { return nil }
         let previousIndex = index - 1
