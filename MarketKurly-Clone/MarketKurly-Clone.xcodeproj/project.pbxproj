@@ -260,12 +260,8 @@
 		0386F4EC2A7F9BFB0030B335 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				0330CAC22A77D16B004CE2D7 /* HomeViewController.swift */,
-				0386F4FA2A7FB85C0030B335 /* KurlyRecommendationViewController.swift */,
-				0386F4FC2A7FBBC50030B335 /* NewProductViewController.swift */,
-				0386F4FE2A7FBBCD0030B335 /* BestViewController.swift */,
-				0386F5002A7FBBE70030B335 /* ThriftyShoppingViewController.swift */,
-				0386F5022A7FBC050030B335 /* SpecialsViewController.swift */,
+				0386F5052A80EDE00030B335 /* Home */,
+				0386F5042A80EDB40030B335 /* PageViewController */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -292,6 +288,26 @@
 				0386F4F82A7FB5030030B335 /* MenuView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		0386F5042A80EDB40030B335 /* PageViewController */ = {
+			isa = PBXGroup;
+			children = (
+				0386F4FA2A7FB85C0030B335 /* KurlyRecommendationViewController.swift */,
+				0386F4FC2A7FBBC50030B335 /* NewProductViewController.swift */,
+				0386F4FE2A7FBBCD0030B335 /* BestViewController.swift */,
+				0386F5002A7FBBE70030B335 /* ThriftyShoppingViewController.swift */,
+				0386F5022A7FBC050030B335 /* SpecialsViewController.swift */,
+			);
+			path = PageViewController;
+			sourceTree = "<group>";
+		};
+		0386F5052A80EDE00030B335 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				0330CAC22A77D16B004CE2D7 /* HomeViewController.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
