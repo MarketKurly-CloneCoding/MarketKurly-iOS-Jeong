@@ -7,23 +7,46 @@
 
 import UIKit
 
-class KurlyRecommendationViewController: UIViewController {
+import Moya
+import SnapKit
+import Then
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        view.backgroundColor = .black
-        // Do any additional setup after loading the view.
+final class KurlyRecommendationViewController: UIViewController {
+    
+    // MARK: - UI Components
+    
+    private enum SectionType: CaseIterable {
+        case poster, recommended, advertisement, sale
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    // MARK: - Properties
+    
+    // MARK: - Initializer
+    
+    // MARK: - View Life Cycle
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setUI()
+        setLayout()
     }
-    */
+}
 
+extension KurlyRecommendationViewController {
+    
+    // MARK: - UI Components Property
+    
+    private func setUI() {
+        
+    }
+    
+    // MARK: - Layout Helper
+    
+    private func setLayout() {
+        
+    }
+    
+    // MARK: - Methods
+    
+    // MARK: - @objc Methods
 }
