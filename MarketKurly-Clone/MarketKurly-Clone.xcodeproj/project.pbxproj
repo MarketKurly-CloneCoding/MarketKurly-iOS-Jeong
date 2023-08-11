@@ -40,6 +40,7 @@
 		0386F5012A7FBBE70030B335 /* ThriftyShoppingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0386F5002A7FBBE70030B335 /* ThriftyShoppingViewController.swift */; };
 		0386F5032A7FBC050030B335 /* SpecialsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0386F5022A7FBC050030B335 /* SpecialsViewController.swift */; };
 		0386F50F2A868F060030B335 /* PosterCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0386F50E2A868F060030B335 /* PosterCollectionViewCell.swift */; };
+		0386F5132A8692E30030B335 /* ProductCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0386F5122A8692E30030B335 /* ProductCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -75,6 +76,7 @@
 		0386F5002A7FBBE70030B335 /* ThriftyShoppingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThriftyShoppingViewController.swift; sourceTree = "<group>"; };
 		0386F5022A7FBC050030B335 /* SpecialsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecialsViewController.swift; sourceTree = "<group>"; };
 		0386F50E2A868F060030B335 /* PosterCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosterCollectionViewCell.swift; sourceTree = "<group>"; };
+		0386F5122A8692E30030B335 /* ProductCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -365,6 +367,7 @@
 			isa = PBXGroup;
 			children = (
 				0386F50E2A868F060030B335 /* PosterCollectionViewCell.swift */,
+				0386F5122A8692E30030B335 /* ProductCollectionViewCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -467,6 +470,7 @@
 				0386F4FF2A7FBBCD0030B335 /* BestViewController.swift in Sources */,
 				0330CA852A77CA53004CE2D7 /* AppDelegate.swift in Sources */,
 				0330CACC2A79441A004CE2D7 /* CustomNavigationBar.swift in Sources */,
+				0386F5132A8692E30030B335 /* ProductCollectionViewCell.swift in Sources */,
 				0330CA872A77CA53004CE2D7 /* SceneDelegate.swift in Sources */,
 				0386F50F2A868F060030B335 /* PosterCollectionViewCell.swift in Sources */,
 				0330CAC72A77D191004CE2D7 /* SearchViewController.swift in Sources */,
