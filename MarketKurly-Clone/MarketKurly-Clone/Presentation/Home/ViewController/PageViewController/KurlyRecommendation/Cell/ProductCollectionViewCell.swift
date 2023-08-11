@@ -24,7 +24,16 @@ final class ProductCollectionViewCell: UICollectionViewCell {
     
     // MARK: - Properties
     
-    private var saleInfo: Bool = false
+    private var isSaleLabelHidden: Bool = true {
+        didSet {
+            saleLabel.isHidden = isSaleLabelHidden
+            if !isSaleLabelHidden {
+                priceLabel.snp.makeConstraints {
+                    $0.leading.equalTo(saleLabel.snp.trailing)
+                }
+            }
+        }
+    }
     private var presentInfo: Bool = false
     
     // MARK: - View Life Cycle
@@ -126,5 +135,21 @@ extension ProductCollectionViewCell {
     }
     
     // MARK: - Methods
-
+    
+    func setDataBind(model: ProductModel) {
+        productImageView.image = model.productImage
+        nameLabel.text = model.name
+        if let salePersent = model.salePercent {
+            saleLabel.text = salePersent
+            saleLabel.isHidden = false
+        }
+        priceLabel.text = model.price
+        if let costPrice = model.costPrice {
+            costPriceLabel.text = costPrice
+            costPriceLabel.isHidden = false
+        }
+        if model.presentInfo == true {
+            print("선물하기")
+        }
+    }
 }
