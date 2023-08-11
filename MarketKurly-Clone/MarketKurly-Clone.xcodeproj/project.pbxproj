@@ -293,11 +293,11 @@
 		0386F5042A80EDB40030B335 /* PageViewController */ = {
 			isa = PBXGroup;
 			children = (
-				0386F4FA2A7FB85C0030B335 /* KurlyRecommendationViewController.swift */,
-				0386F4FC2A7FBBC50030B335 /* NewProductViewController.swift */,
-				0386F4FE2A7FBBCD0030B335 /* BestViewController.swift */,
-				0386F5002A7FBBE70030B335 /* ThriftyShoppingViewController.swift */,
-				0386F5022A7FBC050030B335 /* SpecialsViewController.swift */,
+				0386F5062A8682300030B335 /* KurlyRecommendation */,
+				0386F5072A86823C0030B335 /* NewProduct */,
+				0386F5082A8682490030B335 /* Best */,
+				0386F5092A86824F0030B335 /* ThriftyShopping */,
+				0386F50A2A86825B0030B335 /* Specials */,
 			);
 			path = PageViewController;
 			sourceTree = "<group>";
@@ -308,6 +308,46 @@
 				0330CAC22A77D16B004CE2D7 /* HomeViewController.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		0386F5062A8682300030B335 /* KurlyRecommendation */ = {
+			isa = PBXGroup;
+			children = (
+				0386F4FA2A7FB85C0030B335 /* KurlyRecommendationViewController.swift */,
+			);
+			path = KurlyRecommendation;
+			sourceTree = "<group>";
+		};
+		0386F5072A86823C0030B335 /* NewProduct */ = {
+			isa = PBXGroup;
+			children = (
+				0386F4FC2A7FBBC50030B335 /* NewProductViewController.swift */,
+			);
+			path = NewProduct;
+			sourceTree = "<group>";
+		};
+		0386F5082A8682490030B335 /* Best */ = {
+			isa = PBXGroup;
+			children = (
+				0386F4FE2A7FBBCD0030B335 /* BestViewController.swift */,
+			);
+			path = Best;
+			sourceTree = "<group>";
+		};
+		0386F5092A86824F0030B335 /* ThriftyShopping */ = {
+			isa = PBXGroup;
+			children = (
+				0386F5002A7FBBE70030B335 /* ThriftyShoppingViewController.swift */,
+			);
+			path = ThriftyShopping;
+			sourceTree = "<group>";
+		};
+		0386F50A2A86825B0030B335 /* Specials */ = {
+			isa = PBXGroup;
+			children = (
+				0386F5022A7FBC050030B335 /* SpecialsViewController.swift */,
+			);
+			path = Specials;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
