@@ -29,9 +29,9 @@ extension ProductModel {
     static func saleModelDummyData() -> [ProductModel] {
         return [
             ProductModel(productImage: Image.image4, name: "[욱이네] 차돌된장찌개", price: "4875", salePercent: "25", costPrice: "6500", presentInfo: false),
-            ProductModel(productImage: Image.image1, name: "[뚝방길홍차가게] 시그니처 스콘생지 2종 (4입)", price: "7560", salePercent: "10", costPrice: "8400", presentInfo: false),
-            ProductModel(productImage: Image.image2, name: "[미식당] 고구마 치즈롤 돈카츠 150g * 2입 (소스포함)", price: "7663", salePercent: "15", costPrice: "8980", presentInfo: false),
-            ProductModel(productImage: Image.image3, name: "[kim's butcher] 냉동 돌돌말이 삼겹살 (스페인) 200g", price: "6990", salePercent: "22", costPrice: "8990", presentInfo: false)
+            ProductModel(productImage: Image.image5, name: "[뚝방길홍차가게] 시그니처 스콘생지 2종 (4입)", price: "7560", salePercent: "10", costPrice: "8400", presentInfo: false),
+            ProductModel(productImage: Image.image6, name: "[미식당] 고구마 치즈롤 돈카츠 150g * 2입 (소스포함)", price: "7663", salePercent: "15", costPrice: "8980", presentInfo: false),
+            ProductModel(productImage: Image.image7, name: "[kim's butcher] 냉동 돌돌말이 삼겹살 (스페인) 200g", price: "6990", salePercent: "22", costPrice: "8990", presentInfo: false)
         ]
     }
 }

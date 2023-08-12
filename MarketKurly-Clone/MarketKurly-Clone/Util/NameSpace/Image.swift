@@ -17,6 +17,9 @@ public enum Image {
     static let image2 = UIImage(named: "image2")!
     static let image3 = UIImage(named: "image3")!
     static let image4 = UIImage(named: "image4")!
+    static let image5 = UIImage(named: "image5")!
+    static let image6 = UIImage(named: "image6")!
+    static let image7 = UIImage(named: "image7")!
     static let cartLogo = UIImage(named: "home_cart")!
     static let advertisement = UIImage(named: "advertisement")!
     

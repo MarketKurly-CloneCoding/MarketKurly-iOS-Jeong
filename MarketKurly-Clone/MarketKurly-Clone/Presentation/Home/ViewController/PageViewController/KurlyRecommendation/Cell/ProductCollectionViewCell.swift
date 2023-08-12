@@ -53,7 +53,7 @@ extension ProductCollectionViewCell {
         }
         
         basketButton.do {
-            $0.setImage(Image.cartMain, for: .normal)
+            $0.setImage(Image.cartLogo, for: .normal)
         }
         
         nameLabel.do {
