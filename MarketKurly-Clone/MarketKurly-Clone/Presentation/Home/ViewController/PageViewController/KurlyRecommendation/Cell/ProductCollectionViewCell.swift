@@ -53,7 +53,7 @@ extension ProductCollectionViewCell {
         }
         
         basketButton.do {
-            $0.setImage(Image.cartButton, for: .normal)
+            $0.setImage(Image.cartMain, for: .normal)
         }
         
         nameLabel.do {
@@ -75,7 +75,8 @@ extension ProductCollectionViewCell {
         
         costPriceLabel.do {
             $0.font = .systemFont(ofSize: 12, weight: .regular)
-            $0.textColor = Color.gray1
+            $0.textColor = Color.gray2
+            $0.attributedText = costPriceLabel.text?.strikeThrough()
             $0.isHidden = true
         }
     }
@@ -139,6 +140,7 @@ extension ProductCollectionViewCell {
         priceLabel.text = model.price.formattedAsCurrency()
         if let costPrice = model.costPrice {
             costPriceLabel.text = costPrice.formattedAsCurrency()
+            costPriceLabel.attributedText = costPriceLabel.text?.strikeThrough()
             costPriceLabel.isHidden = false
         }
         if model.presentInfo == true {
