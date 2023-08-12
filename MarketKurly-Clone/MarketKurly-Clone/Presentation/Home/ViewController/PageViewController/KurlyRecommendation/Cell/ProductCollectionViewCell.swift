@@ -129,9 +129,12 @@ extension ProductCollectionViewCell {
     func setDataBind(model: ProductModel) {
         productImageView.image = model.productImage
         nameLabel.text = model.name
-        if let salePersent = model.salePercent {
-            saleLabel.text = salePersent + "%"
+        if let salePercent = model.salePercent {
+            saleLabel.text = salePercent + "%"
             saleLabel.isHidden = false
+            priceLabel.snp.updateConstraints {
+                $0.leading.equalTo(saleLabel.snp.trailing).offset(4)
+            }
         }
         priceLabel.text = model.price.formattedAsCurrency()
         if let costPrice = model.costPrice {
