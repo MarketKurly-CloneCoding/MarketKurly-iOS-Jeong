@@ -48,6 +48,7 @@
 		0386F5252A877C600030B335 /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0386F5242A877C600030B335 /* String+.swift */; };
 		0386F5272A877C750030B335 /* Int+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0386F5262A877C750030B335 /* Int+.swift */; };
 		0386F5292A879E0F0030B335 /* UILabel+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0386F5282A879E0F0030B335 /* UILabel+.swift */; };
+		0386F52B2A87A5A50030B335 /* UIViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0386F52A2A87A5A50030B335 /* UIViewController+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -91,6 +92,7 @@
 		0386F5242A877C600030B335 /* String+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
 		0386F5262A877C750030B335 /* Int+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+.swift"; sourceTree = "<group>"; };
 		0386F5282A879E0F0030B335 /* UILabel+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+.swift"; sourceTree = "<group>"; };
+		0386F52A2A87A5A50030B335 /* UIViewController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -205,6 +207,7 @@
 				0386F5242A877C600030B335 /* String+.swift */,
 				0386F5262A877C750030B335 /* Int+.swift */,
 				0386F5282A879E0F0030B335 /* UILabel+.swift */,
+				0386F52A2A87A5A50030B335 /* UIViewController+.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -522,6 +525,7 @@
 				0330CAA32A77CE4E004CE2D7 /* UITabBar+.swift in Sources */,
 				0386F4EF2A7F9E1E0030B335 /* MenuCollectionViewCell.swift in Sources */,
 				0386F5292A879E0F0030B335 /* UILabel+.swift in Sources */,
+				0386F52B2A87A5A50030B335 /* UIViewController+.swift in Sources */,
 				0386F4F42A7FA27E0030B335 /* UICollectionView+.swift in Sources */,
 				0386F4F92A7FB5030030B335 /* PageView.swift in Sources */,
 				0386F4F22A7FA0170030B335 /* HomeMenuModel.swift in Sources */,
