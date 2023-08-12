@@ -67,7 +67,7 @@ extension KurlyRecommendationViewController {
         return section
     }
     
-    private func getLayoutRecommendedSection() -> NSCollectionLayoutSection {
+    private func getLayoutProductSection() -> NSCollectionLayoutSection {
         let itemSize = NSCollectionLayoutSize(
             widthDimension: .fractionalWidth(0.7),
             heightDimension: .fractionalHeight(1.0)
@@ -95,6 +95,27 @@ extension KurlyRecommendationViewController {
         section.orthogonalScrollingBehavior = .continuous
         section.boundarySupplementaryItems = [header]
         
+        return section
+    }
+    
+    private func getLayoutAdvertisementSection() -> NSCollectionLayoutSection {
+        let itemSize = NSCollectionLayoutSize(
+            widthDimension: .fractionalWidth(1.0),
+            heightDimension: .fractionalHeight(1.0)
+        )
+        let item = NSCollectionLayoutItem(layoutSize: itemSize)
+        
+        let groupSize = NSCollectionLayoutSize(
+            widthDimension: .fractionalWidth(1.0),
+            heightDimension: .absolute(78)
+        )
+        let group = NSCollectionLayoutGroup.horizontal(
+            layoutSize: groupSize,
+            subitems: [item]
+        )
+        
+        let section = NSCollectionLayoutSection(group: group)
+        section.contentInsets = NSDirectionalEdgeInsets(top: 32, leading: 0, bottom: 0, trailing: 0)
         return section
     }
     
