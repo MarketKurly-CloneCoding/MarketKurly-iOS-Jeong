@@ -26,6 +26,7 @@ final class KurlyRecommendationViewController: UIViewController {
     private let posterModel: [PosterModel] = PosterModel.posterModelDummyData()
     private let productModel: [ProductModel] = ProductModel.productModelDummyData()
     private let advertisementModel: [AdvertisementModel] = AdvertisementModel.advertisementModelDummyData()
+    private let saleModel: [ProductModel] = ProductModel.saleModelDummyData()
     
     // MARK: - View Life Cycle
     
@@ -181,7 +182,7 @@ extension KurlyRecommendationViewController: UICollectionViewDataSource {
         case .advertisement:
             return advertisementModel.count
         case .sale:
-            return productModel.count
+            return saleModel.count
         }
     }
     
@@ -202,7 +203,7 @@ extension KurlyRecommendationViewController: UICollectionViewDataSource {
             return cell
         case .sale:
             let cell = collectionView.dequeueCell(type: ProductCollectionViewCell.self, indexPath: indexPath)
-            cell.setDataBind(model: productModel[indexPath.row])
+            cell.setDataBind(model: saleModel[indexPath.row])
             return cell
         }
     }
