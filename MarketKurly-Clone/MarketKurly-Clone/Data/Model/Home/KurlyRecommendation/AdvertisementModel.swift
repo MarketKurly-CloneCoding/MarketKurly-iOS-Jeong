@@ -15,7 +15,7 @@ extension AdvertisementModel {
     
     static func advertisementModelDummyData() -> [AdvertisementModel] {
         return [
-            AdvertisementModel(image: Image.image1)
+            AdvertisementModel(image: Image.advertisement)
         ]
     }
 }
