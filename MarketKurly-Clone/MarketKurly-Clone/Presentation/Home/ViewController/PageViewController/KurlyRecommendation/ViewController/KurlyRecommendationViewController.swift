@@ -23,7 +23,9 @@ final class KurlyRecommendationViewController: UIViewController {
     
     // MARK: - Properties
     
-    // MARK: - Initializer
+    private let posterModel: [PosterModel] = PosterModel.posterModelDummyData()
+    private let productModel: [ProductModel] = ProductModel.productModelDummyData()
+    private let advertisementModel: [AdvertisementModel] = AdvertisementModel.advertisementModelDummyData()
     
     // MARK: - View Life Cycle
     
@@ -31,6 +33,8 @@ final class KurlyRecommendationViewController: UIViewController {
         super.viewDidLoad()
         setUI()
         setLayout()
+        setDelegate()
+        setRegister()
     }
 }
 
@@ -40,15 +44,41 @@ extension KurlyRecommendationViewController {
     
     private func setUI() {
         
+        view.backgroundColor = .clear
+        
+        kurlyRecommendationCollectionView.do {
+            $0.showsVerticalScrollIndicator = false
+            $0.isScrollEnabled = true
+            $0.backgroundColor = .clear
+            $0.contentInsetAdjustmentBehavior = .never
+            $0.collectionViewLayout = self.setSectionLayout()
+        }
     }
     
     // MARK: - Layout Helper
     
     private func setLayout() {
         
+        view.addSubviews(kurlyRecommendationCollectionView)
+        
+        kurlyRecommendationCollectionView.snp.makeConstraints {
+            $0.edges.equalToSuperview()
+        }
     }
     
     // MARK: - Methods
+    
+    private func setDelegate() {
+        kurlyRecommendationCollectionView.delegate = self
+        kurlyRecommendationCollectionView.dataSource = self
+    }
+    
+    private func setRegister() {
+        kurlyRecommendationCollectionView.registerCell(PosterCollectionViewCell.self)
+        kurlyRecommendationCollectionView.registerCell(ProductCollectionViewCell.self)
+        kurlyRecommendationCollectionView.registerCell(AdvertisementCollectionViewCell.self)
+        kurlyRecommendationCollectionView.registerHeader(ProductHeaderView.self)
+    }
     
     private func setSectionLayout() -> UICollectionViewLayout {
         return UICollectionViewCompositionalLayout { section, env -> NSCollectionLayoutSection? in
