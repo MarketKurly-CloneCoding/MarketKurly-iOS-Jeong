@@ -227,3 +227,10 @@ extension KurlyRecommendationViewController: UICollectionViewDataSource {
         }
     }
 }
+
+extension KurlyRecommendationViewController: UICollectionViewDelegateFlowLayout {
+    
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return SectionType.allCases.count
+    }
+}

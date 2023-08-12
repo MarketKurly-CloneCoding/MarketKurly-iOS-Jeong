@@ -63,7 +63,7 @@ extension ProductHeaderView {
         
         headerTitleLabel.snp.makeConstraints {
             $0.top.equalToSuperview().inset(26)
-            $0.trailing.equalToSuperview().inset(16)
+            $0.leading.equalToSuperview().inset(16)
         }
         
         allProductButton.snp.makeConstraints {
