@@ -23,17 +23,7 @@ final class ProductCollectionViewCell: UICollectionViewCell {
     private let presentLabel = UILabel()
     
     // MARK: - Properties
-    
-    private var isSaleLabelHidden: Bool = true {
-        didSet {
-            saleLabel.isHidden = isSaleLabelHidden
-            if !isSaleLabelHidden {
-                priceLabel.snp.makeConstraints {
-                    $0.leading.equalTo(saleLabel.snp.trailing)
-                }
-            }
-        }
-    }
+
     private var presentInfo: Bool = false
     
     // MARK: - View Life Cycle
@@ -123,7 +113,7 @@ extension ProductCollectionViewCell {
         
         priceLabel.snp.makeConstraints {
             $0.top.equalTo(nameLabel.snp.bottom)
-            $0.leading.equalToSuperview()
+            $0.leading.equalTo(saleLabel.snp.trailing)
             $0.height.equalTo(20)
         }
         
@@ -140,12 +130,12 @@ extension ProductCollectionViewCell {
         productImageView.image = model.productImage
         nameLabel.text = model.name
         if let salePersent = model.salePercent {
-            saleLabel.text = salePersent
+            saleLabel.text = salePersent + "%"
             saleLabel.isHidden = false
         }
-        priceLabel.text = model.price
+        priceLabel.text = model.price.formattedAsCurrency()
         if let costPrice = model.costPrice {
-            costPriceLabel.text = costPrice
+            costPriceLabel.text = costPrice.formattedAsCurrency()
             costPriceLabel.isHidden = false
         }
         if model.presentInfo == true {

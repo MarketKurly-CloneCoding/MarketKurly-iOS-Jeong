@@ -45,6 +45,8 @@
 		0386F51F2A86A93C0030B335 /* PosterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0386F51E2A86A93C0030B335 /* PosterModel.swift */; };
 		0386F5212A86A9470030B335 /* ProductModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0386F5202A86A9470030B335 /* ProductModel.swift */; };
 		0386F5232A86A9520030B335 /* AdvertisementModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0386F5222A86A9520030B335 /* AdvertisementModel.swift */; };
+		0386F5252A877C600030B335 /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0386F5242A877C600030B335 /* String+.swift */; };
+		0386F5272A877C750030B335 /* Int+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0386F5262A877C750030B335 /* Int+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -85,6 +87,8 @@
 		0386F51E2A86A93C0030B335 /* PosterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosterModel.swift; sourceTree = "<group>"; };
 		0386F5202A86A9470030B335 /* ProductModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductModel.swift; sourceTree = "<group>"; };
 		0386F5222A86A9520030B335 /* AdvertisementModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvertisementModel.swift; sourceTree = "<group>"; };
+		0386F5242A877C600030B335 /* String+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
+		0386F5262A877C750030B335 /* Int+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -196,6 +200,8 @@
 				0330CAA22A77CE4E004CE2D7 /* UITabBar+.swift */,
 				0386F4F32A7FA27E0030B335 /* UICollectionView+.swift */,
 				0386F4F52A7FA2950030B335 /* NSObject+.swift */,
+				0386F5242A877C600030B335 /* String+.swift */,
+				0386F5262A877C750030B335 /* Int+.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -516,6 +522,7 @@
 				0386F4F92A7FB5030030B335 /* PageView.swift in Sources */,
 				0386F4F22A7FA0170030B335 /* HomeMenuModel.swift in Sources */,
 				0386F5182A869B790030B335 /* ProductHeaderView.swift in Sources */,
+				0386F5252A877C600030B335 /* String+.swift in Sources */,
 				0330CAC52A77D176004CE2D7 /* CategoryViewController.swift in Sources */,
 				0330CAB62A77D0C2004CE2D7 /* TabBarController.swift in Sources */,
 				0386F5232A86A9520030B335 /* AdvertisementModel.swift in Sources */,
@@ -531,6 +538,7 @@
 				0330CA872A77CA53004CE2D7 /* SceneDelegate.swift in Sources */,
 				0386F50F2A868F060030B335 /* PosterCollectionViewCell.swift in Sources */,
 				0330CAC72A77D191004CE2D7 /* SearchViewController.swift in Sources */,
+				0386F5272A877C750030B335 /* Int+.swift in Sources */,
 				0386F4F62A7FA2950030B335 /* NSObject+.swift in Sources */,
 				0330CAC92A77D1A3004CE2D7 /* MypageViewController.swift in Sources */,
 				0330CAC32A77D16B004CE2D7 /* HomeViewController.swift in Sources */,
