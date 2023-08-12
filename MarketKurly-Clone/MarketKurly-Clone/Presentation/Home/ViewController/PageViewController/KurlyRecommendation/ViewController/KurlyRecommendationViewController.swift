@@ -166,6 +166,55 @@ extension KurlyRecommendationViewController {
         section.contentInsets = NSDirectionalEdgeInsets(top: 32, leading: 0, bottom: 0, trailing: 0)
         return section
     }
+}
+
+extension KurlyRecommendationViewController: UICollectionViewDataSource {
     
-    // MARK: - @objc Methods
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        let sectionType = SectionType.allCases[section]
+        switch sectionType {
+        case .poster:
+            return posterModel.count
+        case .recommended:
+            return productModel.count
+        case .advertisement:
+            return advertisementModel.count
+        case .sale:
+            return productModel.count
+        }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let sectionType = SectionType.allCases[indexPath.section]
+        switch sectionType {
+        case .poster:
+            let cell = collectionView.dequeueCell(type: PosterCollectionViewCell.self, indexPath: indexPath)
+            cell.setDataBind(model: posterModel[indexPath.row])
+            return cell
+        case .recommended:
+            let cell = collectionView.dequeueCell(type: ProductCollectionViewCell.self, indexPath: indexPath)
+            cell.setDataBind(model: productModel[indexPath.row])
+            return cell
+        case .advertisement:
+            let cell = collectionView.dequeueCell(type: AdvertisementCollectionViewCell.self, indexPath: indexPath)
+            cell.setDataBind(model: advertisementModel[indexPath.row])
+            return cell
+        case .sale:
+            let cell = collectionView.dequeueCell(type: ProductCollectionViewCell.self, indexPath: indexPath)
+            cell.setDataBind(model: productModel[indexPath.row])
+            return cell
+        }
+    }
+    
+//    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+//        let sectionType = SectionType.allCases[indexPath.section]
+//        switch sectionType {
+//        case .poster:
+//            let view = UICollectionReusableView()
+//            return view
+//        case .recommended:
+//            let headerView = collectionView.dequeueReusableCell(kind: kind, type: ProductHeaderView.self, indexPath: indexPath)
+//            return headerView
+//        }
+//    }
 }

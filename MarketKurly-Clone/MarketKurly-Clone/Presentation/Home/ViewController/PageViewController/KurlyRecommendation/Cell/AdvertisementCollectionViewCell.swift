@@ -55,5 +55,8 @@ extension AdvertisementCollectionViewCell {
     }
     
     // MARK: - Methods
-
+    
+    func setDataBind(model: AdvertisementModel) {
+        advertisementImageView.image = model.image
+    }
 }
