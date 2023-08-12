@@ -19,6 +19,8 @@ final class KurlyRecommendationViewController: UIViewController {
     
     // MARK: - UI Components
     
+    private lazy var kurlyRecommendationCollectionView = UICollectionView(frame: .zero, collectionViewLayout: self.setSectionLayout())
+    
     // MARK: - Properties
     
     // MARK: - Initializer
@@ -47,6 +49,22 @@ extension KurlyRecommendationViewController {
     }
     
     // MARK: - Methods
+    
+    private func setSectionLayout() -> UICollectionViewLayout {
+        return UICollectionViewCompositionalLayout { section, env -> NSCollectionLayoutSection? in
+            let sectionType = SectionType.allCases[section]
+            switch sectionType {
+            case .poster:
+                return self.getLayoutPosterSection()
+            case .recommended:
+                return self.getLayoutProductSection()
+            case .advertisement:
+                return self.getLayoutAdvertisementSection()
+            case .sale:
+                return self.getLayoutProductSection()
+            }
+        }
+    }
     
     private func getLayoutPosterSection() -> NSCollectionLayoutSection {
         let itemSize = NSCollectionLayoutSize(
