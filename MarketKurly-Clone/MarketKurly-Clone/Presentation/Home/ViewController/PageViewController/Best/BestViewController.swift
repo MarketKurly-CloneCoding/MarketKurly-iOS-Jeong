@@ -11,7 +11,7 @@ class BestViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .blue
+        view.backgroundColor = .systemGray3
         // Do any additional setup after loading the view.
     }
     
