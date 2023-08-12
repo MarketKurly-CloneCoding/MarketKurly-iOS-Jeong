@@ -206,15 +206,24 @@ extension KurlyRecommendationViewController: UICollectionViewDataSource {
         }
     }
     
-//    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-//        let sectionType = SectionType.allCases[indexPath.section]
-//        switch sectionType {
-//        case .poster:
-//            let view = UICollectionReusableView()
-//            return view
-//        case .recommended:
-//            let headerView = collectionView.dequeueReusableCell(kind: kind, type: ProductHeaderView.self, indexPath: indexPath)
-//            return headerView
-//        }
-//    }
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        let sectionType = SectionType.allCases[indexPath.section]
+        switch sectionType {
+        case .poster:
+            let view = UICollectionReusableView()
+            return view
+        case .recommended:
+            let headerView = collectionView.dequeueReusableCell(kind: kind, type: ProductHeaderView.self, indexPath: indexPath)
+            headerView.setHeaderTitle(title: "이 상품 어때요?")
+            return headerView
+        case .advertisement:
+            let view = UICollectionReusableView()
+            return view
+        case .sale:
+            let headerView = collectionView.dequeueReusableCell(kind: kind, type: ProductHeaderView.self, indexPath: indexPath)
+            headerView.setHeaderTitle(title: "놓치면 후회할 가격")
+            headerView.isAllProductButtonIncluded = true
+            return headerView
+        }
+    }
 }

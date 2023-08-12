@@ -14,6 +14,13 @@ class ProductHeaderView: UICollectionReusableView {
     private let headerTitleLabel = UILabel()
     private let allProductButton = UIButton()
     
+    // MARK: - Properties
+    
+    var isAllProductButtonIncluded: Bool {
+        get { !allProductButton.isHidden }
+        set { allProductButton.isHidden = !newValue }
+    }
+    
     // MARK: - View Life Cycle
     
     override init(frame: CGRect) {
@@ -63,5 +70,11 @@ extension ProductHeaderView {
             $0.top.equalTo(headerTitleLabel)
             $0.trailing.equalToSuperview().inset(10)
         }
+    }
+    
+    // MARK: - Methods
+    
+    func setHeaderTitle(title: String) {
+        headerTitleLabel.text = title
     }
 }
