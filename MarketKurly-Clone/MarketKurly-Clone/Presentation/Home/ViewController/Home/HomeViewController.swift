@@ -16,8 +16,12 @@ final class HomeViewController: UIViewController {
     // MARK: - UI Components
     
     private let navigationView = CustomNavigationBar()
+    private let menuCollectionView = PageView()
     
     // MARK: - Properties
+    
+    private var menuTitleModel: [HomeMenuModel] = HomeMenuModel.homeMenuData()
+    private var menuCollectionViewInset: Int = 0
     
     // MARK: - Initializer
     
@@ -37,19 +41,25 @@ extension HomeViewController {
     private func setUI() {
         
         view.backgroundColor = Color.white
-        
+    
     }
     
     // MARK: - Layout Helper
     
     private func setLayout() {
         
-        view.addSubviews(navigationView)
+        view.addSubviews(navigationView, menuCollectionView)
         
         navigationView.snp.makeConstraints {
             $0.top.equalToSuperview()
             $0.leading.trailing.equalToSuperview()
             $0.height.equalTo(94)
+        }
+        
+        menuCollectionView.snp.makeConstraints {
+            $0.top.equalTo(navigationView.snp.bottom)
+            $0.leading.trailing.equalTo(view.safeAreaLayoutGuide)
+            $0.bottom.equalTo(view.safeAreaLayoutGuide).inset(self.tabBarHeight)
         }
     }
     
